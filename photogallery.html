@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Курсовая работа</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans&display=swap">
+  <link rel="shortcut icon" href="./img/favicon_io/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+  <div class="menu">
+    <div class="menu-wrap">
+      <input type="checkbox" id="checkbox">
+      <nav>
+        <ul>
+          <li><a href="./index.html">Главная</a></li>
+          <li><a href="./portfolio.html">Портфолио</a></li>
+          <li><a href="./photogallery.html" class="disabled">Фотогалерея</a></li>
+          <li><a href="./contacts.html">Контакты</a></li>
+          <li><a href="./blog.html">Источники</a></li>
+        </ul>
+      </nav>
+      <label for="checkbox">
+        <i class="fa fa-bars menu-icon"></i>
+      </label>
+    </div>
+  </div>
+
+  <section class="section">
+    <h1> Фото моей деревни.</h1>
+    <div class="photo_container">
+
+      <div class="mySlides">
+        <div class="numberslide">1 / 6</div>
+        <img src="./img/1 - dom.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numberslide">2 / 6</div>
+        <img src="./img/2 - domzima.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numberslide">3 / 6</div>
+        <img src="./img/3 - tima.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numberslide">4 / 6</div>
+        <img src="./img/4 - ujik.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numberslide">5 / 6</div>
+        <img src="./img/5 - vesy.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numberslide">6 / 6</div>
+        <img src="./img/6 - vid.jpg" style="width:100%">
+      </div>
+
+      <a class="prev_photo" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next_photo" onclick="plusSlides(1)">&#10095;</a>
+
+      <div class="caption_photo">
+        <p id="caption_photo_text"></p>
+      </div>
+
+      <div class="row_photo">
+        <div class="column_photo">
+          <img class="demo_photo" src="./img/01 - dom.jpg" style="width:100%" onclick="currentSlide(1)"
+            alt="Это мой дом. Ему уже более 100 лет.">
+        </div>
+        <div class="column_photo">
+          <img class="demo_photo" src="./img/02 - domzima.jpg" style="width:100%" onclick="currentSlide(2)"
+            alt="А это вид на наш участок сзади зимой.">
+        </div>
+        <div class="column_photo">
+          <img class="demo_photo" src="./img/03 - tima.jpg" style="width:100%" onclick="currentSlide(3)"
+            alt="Мы живём не одни - кот Тима играет с Бурундуком и Рыжиком.">
+        </div>
+        <div class="column_photo">
+          <img class="demo_photo" src="./img/04 - ujik.jpg" style="width:100%" onclick="currentSlide(4)"
+            alt="И такие гости у нас бывают - ужики.">
+        </div>
+        <div class="column_photo">
+          <img class="demo_photo" src="./img/05 - vesy.jpg" style="width:100%" onclick="currentSlide(5)"
+            alt="Вот такие весы 1841 года изготовления я нашёл в сарае">
+        </div>
+        <div class="column_photo">
+          <img class="demo_photo" src="./img/06 - vid.jpg" style="width:100%" onclick="currentSlide(6)"
+            alt="А это вид на соседнюю деревню.">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Курсовая работа - Паранин Р.Ю., группа РСРС-0921-01, Университет <q>Синергия</q></p>
+  </footer>
+
+  <script src="./js/photogallery.js"></script>
+  
+</body>
+
+</html>

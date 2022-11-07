@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Курсовая работа</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans&display=swap">
+    <!-- Подключение карты Яндекс -->
+    <link rel="shortcut icon" href="./img/favicon_io/favicon.ico" type="image/x-icon">
+    <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var map = new YMaps.Map(document.getElementById("YMapsID"));
+            map.setCenter(new YMaps.GeoPoint(40.00705, 57.72956), 13);
+            var placemark = new YMaps.Placemark(new YMaps.GeoPoint(40.00705, 57.72956), { hideIcon: false });
+            placemark.name = "д. Семёновское";
+            placemark.description = "Ярославский р-н";
+            map.addOverlay(placemark);
+            map.addControl(new YMaps.TypeControl());
+            map.addControl(new YMaps.ToolBar());
+            map.addControl(new YMaps.Zoom());
+            map.addControl(new YMaps.ScaleLine());
+        };
+    </script>
+</head>
+
+<body>
+
+    <div class="menu">
+        <div class="menu-wrap">
+            <input type="checkbox" id="checkbox">
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Главная</a></li>
+                    <li><a href="./portfolio.html">Портфолио</a></li>
+                    <li><a href="./photogallery.html">Фотогалерея</a></li>
+                    <li><a href="./contacts.html" class="disabled">Контакты</a></li>
+                    <li><a href="./blog.html">Источники</a></li>
+                </ul>
+            </nav>
+            <label for="checkbox">
+                <i class="fa fa-bars menu-icon"></i>
+            </label>
+        </div>
+    </div>
+
+    <section class="section ">
+        <h1> Контакты.</h1>
+        <div class="section_contacts">
+            <div class="body_contacts">
+                <div class="text_contacts">
+                    <h2>Телефон:</h2>
+                    <p> +7(999)999-99-99</p>
+                    <h2>E-mail:</h2>
+                    <p> r.educat@yandex.ru</p>
+                    <h2>Соцсети::</h2>
+                    <p>
+                        <a href=" https://wa.me/79610210613">
+                            <img src="./img/icons/whatsapp.png" title="Вызов WhatsApp" alt="Иконка WhatsApp"
+                                class="contacts-img">WhatsApp
+                        </a>
+                        <a href="  https://t.me/+79610210613">
+                            <img src="./img/icons/telegram.png" title="Вызов Telegram" alt="Иконка Telegram"
+                                class="contacts-img">Telegram
+                        </a>
+                    </p>
+                    <h2>Адрес:</h2>
+                    <p>Ярославская область, Ярославский район, деревня Семёновское, дом 2</p>
+                </div>
+                <div id="YMapsID" class="map-div"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Курсовая работа - Паранин Р.Ю., группа РСРС-0921-01, Университет <q>Синергия</q></p>
+    </footer>
+
+</body>
+
+</html>
